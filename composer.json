@@ -3,7 +3,8 @@
     "autoload": {
         "psr-4": {
             "Hexlet\\Code\\": "src/"
-        }
+        },
+        "files": ["src/Cli.php"]
     },
     "authors": [
         {
@@ -11,7 +12,9 @@
             "email": "ivan.elantyev@yandex.ru"
         }
     ],
-    "require": {},
+    "require": {
+        "wp-cli/php-cli-tools": "*"
+    },
     "bin": [
         "bin/brain-games"
     ]
