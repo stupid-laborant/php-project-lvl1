@@ -1,0 +1,24 @@
+#!/usr/bin/env php
+<?php
+
+use function cli\line;
+use function cli\prompt;
+
+require_once 'vendor/autoload.php';
+
+$numberOfQuestions = 3;
+$gameName = "Brain Game";
+function generateQuestions(int $numberOfQuestions): array
+{
+    $questions = [];
+    for ($i = 0; $i < $numberOfQuestions; $i++) {
+        $num = rand();
+        $questions[] = [$num, $num % 2 == 0 ? 'yes' : 'no'];
+    }
+    return $questions;
+}
+
+$questions = generateQuestions($numberOfQuestions);
+$message = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
+$name = sayHello($gameName);
+gameCycle($name, $questions, $message);

@@ -1,0 +1,42 @@
+#!/usr/bin/env php
+<?php
+
+use function cli\line;
+use function cli\prompt;
+
+require_once 'vendor/autoload.php';
+
+$numberOfQuestions = 3;
+$gameName = "Brain Calc";
+function generateQuestions(int $numberOfQuestions): array
+{
+    $questions = [];
+    for ($i = 0; $i < $numberOfQuestions; $i++) {
+        $num1 = rand(0, 50);
+        $num2 = rand(0, 50);
+        $num3 = rand(1, 3);
+        $action = "";
+        $rightAnswer = 0;
+        switch ($num3) {
+            case 1:
+                $action = "+";
+                $rightAnswer = $num1 + $num2;
+                break;
+            case 2:
+                $action = "-";
+                $rightAnswer = $num1 - $num2;
+                break;
+            case 3:
+                $action = "*";
+                $rightAnswer = $num1 * $num2;
+                break;
+        }
+        $questions[] = ["$num1 $action $num2", $rightAnswer];
+    }
+    return $questions;
+}
+
+$questions = generateQuestions($numberOfQuestions);
+$message = "What is the result of the expression?";
+$name = sayHello($gameName);
+gameCycle($name, $questions, $message);
