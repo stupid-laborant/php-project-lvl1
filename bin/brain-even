@@ -1,0 +1,8 @@
+#!/usr/bin/env php
+<?php
+
+use function Brain\Games\BrainEven\play;
+
+require_once 'vendor/autoload.php';
+
+play();

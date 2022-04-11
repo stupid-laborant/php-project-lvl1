@@ -1,13 +1,12 @@
 #!/usr/bin/env php
 <?php
 
-use function cli\line;
-use function cli\prompt;
+namespace Brain\Games\BrainCalc;
+
+const MESSAGE = "What is the result of the expression?";
 
 require_once 'vendor/autoload.php';
 
-$numberOfQuestions = 3;
-$gameName = "Brain Calc";
 function generateQuestions(int $numberOfQuestions): array
 {
     $questions = [];
@@ -31,12 +30,13 @@ function generateQuestions(int $numberOfQuestions): array
                 $rightAnswer = $num1 * $num2;
                 break;
         }
-        $questions[] = ["$num1 $action $num2", $rightAnswer];
+        $questions["$num1 $action $num2"] = $rightAnswer;
     }
     return $questions;
 }
 
-$questions = generateQuestions($numberOfQuestions);
-$message = "What is the result of the expression?";
-$name = sayHello($gameName);
-gameCycle($name, $questions, $message);
+function play()
+{
+    $questions = generateQuestions(NUMBER_OF_QUESTION);
+    run($questions, MESSAGE);
+}

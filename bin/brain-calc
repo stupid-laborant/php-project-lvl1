@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
-require_once 'vendor/autoload.php';
-use function Brain\Games\Cli\sayHello as hello;
 
-hello();
+use function Brain\Games\BrainCalc\play;
+
+require_once 'vendor/autoload.php';
+
+play();
