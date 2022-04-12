@@ -1,5 +1,6 @@
 #!/usr/bin/env php
 <?php
+
 namespace Brain\Games\Progression;
 
 const MESSAGE = "What number is missing in the progression?";

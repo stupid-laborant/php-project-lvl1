@@ -1,5 +1,6 @@
 #!/usr/bin/env php
 <?php
+
 namespace Brain\Games\Even;
 
 const MESSAGE = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
