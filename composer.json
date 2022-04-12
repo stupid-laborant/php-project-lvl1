@@ -11,6 +11,7 @@
             "src/Games/brain-even.php",
             "src/Games/brain-games.php",
             "src/Games/brain-gcd.php",
+            "src/Games/brain-progression.php",
             "src/utils/const.php"
         ]
     },
@@ -27,7 +28,8 @@
         "src/brain-games",
         "src/brain-even",
         "src/brain-calc",
-        "src/brain-gcd"
+        "src/brain-gcd",
+        "src/brain-progression"
     ],
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.6"

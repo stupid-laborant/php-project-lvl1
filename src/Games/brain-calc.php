@@ -1,8 +1,6 @@
 #!/usr/bin/env php
 <?php
 
-namespace Brain\Games\BrainCalc;
-
 const MESSAGE = "What is the result of the expression?";
 
 require_once 'vendor/autoload.php';

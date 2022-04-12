@@ -3,6 +3,4 @@
 
 require_once 'vendor/autoload.php';
 
-use function Brain\Games\BrainGames\play;
-
 play();

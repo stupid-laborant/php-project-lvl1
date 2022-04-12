@@ -1,8 +1,6 @@
 #!/usr/bin/env php
 <?php
 
-namespace Brain\Games\BrainEven;
-
 const MESSAGE = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
 
 require_once 'vendor/autoload.php';
