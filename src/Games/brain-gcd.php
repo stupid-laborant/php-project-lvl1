@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+namespace Brain\Games\Gcd;
+
 const MESSAGE = "Find the greatest common divisor of given numbers.";
 
 require_once 'vendor/autoload.php';
