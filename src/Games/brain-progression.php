@@ -11,8 +11,8 @@ function generateQuestions(int $numberOfQuestions): array
 {
     $questions = [];
     for ($i = 0; $i < $numberOfQuestions; $i++) {
-        $element = rand(0, 100);
-        $diff = rand(1, 99);
+        $element = rand(0, 20);
+        $diff = rand(1, 20);
         $numOfElements = rand(5, 15);
         $position = rand(0, $numOfElements - 1);
         $question = "";

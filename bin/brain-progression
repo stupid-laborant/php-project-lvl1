@@ -1,6 +1,8 @@
 #!/usr/bin/env php
 <?php
 
+use function Brain\Games\Progression\play;
+
 require_once 'vendor/autoload.php';
 
 play();
