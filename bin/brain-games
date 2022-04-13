@@ -1,8 +1,8 @@
 #!/usr/bin/env php
 <?php
 
-use function Brain\Games\Games\play;
+use function Brain\Games\Cli\sayHello;
 
 require_once 'vendor/autoload.php';
 
-play();
+sayHello();
