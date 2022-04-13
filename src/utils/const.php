@@ -1,7 +1,7 @@
 <?php
 
 const NUMBER_OF_QUESTION = 3;
-const HELLO = "Welcome to the Brain Game!";
+const HELLO = "Welcome to the Brain Games!";
 const ASK_NAME = "May I have your name?";
 const GREETING = "Hello, %s!";
 const CONGRATULATION = "Congratulations, %s!";
