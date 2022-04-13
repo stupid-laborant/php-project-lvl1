@@ -4,15 +4,14 @@
 namespace Brain\Games\Calc;
 
 const MESSAGE = "What is the result of the expression?";
-
-require_once 'vendor/autoload.php';
+const NUMBER_RANGE = 50;
 
 function generateQuestions(int $numberOfQuestions): array
 {
     $questions = [];
     for ($i = 0; $i < $numberOfQuestions; $i++) {
-        $num1 = rand(0, 50);
-        $num2 = rand(0, 50);
+        $num1 = rand(0, NUMBER_RANGE);
+        $num2 = rand(0, NUMBER_RANGE);
         $num3 = rand(1, 3);
         $action = "";
         $rightAnswer = 0;

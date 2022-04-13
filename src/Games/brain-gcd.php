@@ -4,15 +4,14 @@
 namespace Brain\Games\Gcd;
 
 const MESSAGE = "Find the greatest common divisor of given numbers.";
-
-require_once 'vendor/autoload.php';
+const NUMBER_RANGE = 1000;
 
 function generateQuestions(int $numberOfQuestions): array
 {
     $questions = [];
     for ($i = 0; $i < $numberOfQuestions; $i++) {
-        $num1 = rand(0, 1000);
-        $num2 = rand(0, 1000);
+        $num1 = rand(0, NUMBER_RANGE);
+        $num2 = rand(0, NUMBER_RANGE);
         $answer = findNcd($num1, $num2);
         $questions["$num1 $num2"] = $answer;
     }

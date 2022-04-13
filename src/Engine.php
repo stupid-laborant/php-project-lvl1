@@ -7,8 +7,6 @@
 use function cli\line;
 use function cli\prompt;
 
-require_once 'vendor/autoload.php';
-
 function sayHello(): string
 {
      line(HELLO);
