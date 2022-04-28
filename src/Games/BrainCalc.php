@@ -20,7 +20,7 @@ function generateQuestions(int $numberOfQuestions): array
     return $questions;
 }
 
-function calc($num1, $num2, $operation)
+function calc(int $num1, int $num2, string $operation)
 {
     $rightAnswer = 0;
     switch ($operation) {

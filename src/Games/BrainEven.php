@@ -16,12 +16,12 @@ function generateQuestions(int $numberOfQuestions): array
     return $questions;
 }
 
-function isEven($num): bool
+function isEven(int $num): bool
 {
     return $num % 2 === 0;
 }
 
-function check($num): string
+function check(int $num): string
 {
     return isEven($num) ? 'yes' : 'no';
 }

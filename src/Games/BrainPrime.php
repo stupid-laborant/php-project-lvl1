@@ -21,12 +21,12 @@ function generateQuestions(int $numberOfQuestion): array
 }
 
 
-function isExist($element): bool
+function isExist(int $element): bool
 {
     return $element != 0;
 }
 
-function check($element): string
+function check(int $element): string
 {
     return isExist($element) ? 'yes' : 'no';
 }
