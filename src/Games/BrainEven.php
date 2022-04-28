@@ -23,7 +23,7 @@ function isEven($num): bool
 
 function check($num): string
 {
-    return isEven($num)? 'yes' : 'no';
+    return isEven($num) ? 'yes' : 'no';
 }
 
 function play()

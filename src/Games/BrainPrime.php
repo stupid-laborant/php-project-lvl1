@@ -28,7 +28,7 @@ function isExist($element): bool
 
 function check($element): string
 {
-    return isExist($element)? 'yes' : 'no';
+    return isExist($element) ? 'yes' : 'no';
 }
 
 function findPrimeNumbers(int $max): array
