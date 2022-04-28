@@ -5,6 +5,7 @@ namespace Brain\Games\Gcd;
 
 const MESSAGE = "Find the greatest common divisor of given numbers.";
 const NUMBER_RANGE = 1000;
+const NUMBER_OF_QUESTION = 3;
 
 function generateQuestions(int $numberOfQuestions): array
 {

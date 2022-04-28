@@ -8,6 +8,7 @@ const MAX_FIRST_ELEMENT = 20;
 const MAX_DIFFERENCE = 20;
 const MIN_NUMBER_OF_ELEMENTS = 5;
 const MAX_NUMBER_OF_ELEMENTS = 15;
+const NUMBER_OF_QUESTION = 3;
 
 function generateQuestions(int $numberOfQuestions): array
 {
