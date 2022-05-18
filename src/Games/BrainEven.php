@@ -3,8 +3,7 @@
 
 namespace Brain\Games\Even;
 
-const MESSAGE = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
-const NUMBER_OF_QUESTION = 3;
+const DESCRIPTION = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
 
 function generateQuestions(int $numberOfQuestions): array
 {
@@ -29,5 +28,5 @@ function check(int $num): string
 function play()
 {
     $questions = generateQuestions(NUMBER_OF_QUESTION);
-    run($questions, MESSAGE);
+    run($questions, DESCRIPTION);
 }

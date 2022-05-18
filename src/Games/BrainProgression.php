@@ -3,12 +3,11 @@
 
 namespace Brain\Games\Progression;
 
-const MESSAGE = "What number is missing in the progression?";
+const DESCRIPTION = "What number is missing in the progression?";
 const MAX_FIRST_ELEMENT = 20;
 const MAX_DIFFERENCE = 20;
 const MIN_NUMBER_OF_ELEMENTS = 5;
 const MAX_NUMBER_OF_ELEMENTS = 15;
-const NUMBER_OF_QUESTION = 3;
 
 function generateQuestions(int $numberOfQuestions): array
 {
@@ -37,5 +36,5 @@ function generateQuestions(int $numberOfQuestions): array
 function play()
 {
     $questions = generateQuestions(NUMBER_OF_QUESTION);
-    run($questions, MESSAGE);
+    run($questions, DESCRIPTION);
 }

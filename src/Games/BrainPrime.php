@@ -3,10 +3,9 @@
 
 namespace Brain\Games\Prime;
 
-const MESSAGE = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
+const DESCRIPTION = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
 const NUMBER_MIN = 50;
 const NUMBER_MAX = 500;
-const NUMBER_OF_QUESTION = 3;
 
 function generateQuestions(int $numberOfQuestion): array
 {
@@ -51,5 +50,5 @@ function findPrimeNumbers(int $max): array
 function play()
 {
     $questions = generateQuestions(NUMBER_OF_QUESTION);
-    run($questions, MESSAGE);
+    run($questions, DESCRIPTION);
 }
