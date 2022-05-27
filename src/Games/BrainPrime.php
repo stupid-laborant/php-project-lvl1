@@ -7,16 +7,16 @@ const DESCRIPTION = "Answer \"yes\" if given number is prime. Otherwise answer \
 const NUMBER_MIN = 50;
 const NUMBER_MAX = 500;
 
-function generateQuestions(int $numberOfQuestion): array
+function play()
 {
-    $questions = [];
+    $questionsAndAnswers = [];
     $range = rand(NUMBER_MIN, NUMBER_MAX);
     $primeNumbers = findPrimeNumbers($range);
-    for ($i = 0; $i < $numberOfQuestion; $i++) {
+    for ($i = 0; $i < NUMBER_OF_QUESTIONS; $i++) {
         $num = rand(0, $range);
-        $questions[$num] = check($primeNumbers[$num]);
+        $questionsAndAnswers[] = ['question' => $num, 'answer' => check($primeNumbers[$num] ?? 0)];
     }
-    return $questions;
+    run($questionsAndAnswers, DESCRIPTION);
 }
 
 
@@ -45,10 +45,4 @@ function findPrimeNumbers(int $max): array
         }
     }
     return $primeNumbers;
-}
-
-function play()
-{
-    $questions = generateQuestions(NUMBER_OF_QUESTION);
-    run($questions, DESCRIPTION);
 }

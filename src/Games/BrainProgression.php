@@ -9,10 +9,10 @@ const MAX_DIFFERENCE = 20;
 const MIN_NUMBER_OF_ELEMENTS = 5;
 const MAX_NUMBER_OF_ELEMENTS = 15;
 
-function generateQuestions(int $numberOfQuestions): array
+function play()
 {
     $questions = [];
-    for ($i = 0; $i < $numberOfQuestions; $i++) {
+    for ($i = 0; $i < NUMBER_OF_QUESTIONS; $i++) {
         $element = rand(0, MAX_FIRST_ELEMENT);
         $diff = rand(1, MAX_DIFFERENCE);
         $numOfElements = rand(MIN_NUMBER_OF_ELEMENTS, MAX_NUMBER_OF_ELEMENTS);
@@ -24,17 +24,11 @@ function generateQuestions(int $numberOfQuestions): array
                 $question .= ".. ";
                 $rightAnswer = $element;
             } else {
-                $question .= "$element ";
+                $question .= "{$element} ";
             }
             $element += $diff;
         }
-        $questions[$question] = $rightAnswer;
+        $questions[] = ['question' => $question, 'answer' => $rightAnswer];
     }
-    return $questions;
-}
-
-function play()
-{
-    $questions = generateQuestions(NUMBER_OF_QUESTION);
     run($questions, DESCRIPTION);
 }

@@ -7,16 +7,17 @@ const DESCRIPTION = "What is the result of the expression? (for division - the i
 const NUMBER_RANGE = 50;
 const OPERATIONS = ['+', '-', '*'];
 
-function generateQuestions(int $numberOfQuestions): array
+function play()
 {
-    $questions = [];
-    for ($i = 0; $i < $numberOfQuestions; $i++) {
+    $questionsAndAnswers = [];
+    for ($i = 0; $i < NUMBER_OF_QUESTIONS; $i++) {
         $num1 = rand(0, NUMBER_RANGE);
         $num2 = rand(0, NUMBER_RANGE);
         $operation = OPERATIONS[array_rand(OPERATIONS)];
-        $questions["$num1 $operation $num2"] = calc($num1, $num2, $operation);
+        $question = "{$num1} {$operation} {$num2}";
+        $questionsAndAnswers[] = ['question' => $question, 'answer' => calc($num1, $num2, $operation)];
     }
-    return $questions;
+    run($questionsAndAnswers, DESCRIPTION);
 }
 
 function calc(int $num1, int $num2, string $operation)
@@ -36,10 +37,4 @@ function calc(int $num1, int $num2, string $operation)
             throw new \Exception("Unknown operator: {$operation}");
     }
     return $rightAnswer;
-}
-
-function play()
-{
-    $questions = generateQuestions(NUMBER_OF_QUESTION);
-    run($questions, DESCRIPTION);
 }

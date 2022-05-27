@@ -5,14 +5,14 @@ namespace Brain\Games\Even;
 
 const DESCRIPTION = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
 
-function generateQuestions(int $numberOfQuestions): array
+function play()
 {
-    $questions = [];
-    for ($i = 0; $i < $numberOfQuestions; $i++) {
+    $questionsAndAnswers = [];
+    for ($i = 0; $i < NUMBER_OF_QUESTIONS; $i++) {
         $num = rand();
-        $questions[$num] = check($num);
+        $questionsAndAnswers[] = ['question' => $num, 'answer' => check($num)];
     }
-    return $questions;
+    run($questionsAndAnswers, DESCRIPTION);
 }
 
 function isEven(int $num): bool
@@ -23,10 +23,4 @@ function isEven(int $num): bool
 function check(int $num): string
 {
     return isEven($num) ? 'yes' : 'no';
-}
-
-function play()
-{
-    $questions = generateQuestions(NUMBER_OF_QUESTION);
-    run($questions, DESCRIPTION);
 }

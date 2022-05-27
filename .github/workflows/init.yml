@@ -18,4 +18,4 @@ jobs:
       - name: install
         run: make install
       - name: init
-        run: make init
+        run: make lint

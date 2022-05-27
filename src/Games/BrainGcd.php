@@ -6,16 +6,16 @@ namespace Brain\Games\Gcd;
 const DESCRIPTION = "Find the greatest common divisor of given numbers.";
 const NUMBER_RANGE = 1000;
 
-function generateQuestions(int $numberOfQuestions): array
+function play()
 {
-    $questions = [];
-    for ($i = 0; $i < $numberOfQuestions; $i++) {
-        $num1 = rand(0, NUMBER_RANGE);
-        $num2 = rand(0, NUMBER_RANGE);
+    $questionsAndAnswers = [];
+    for ($i = 0; $i < NUMBER_OF_QUESTIONS; $i++) {
+        $num1 = rand(1, NUMBER_RANGE);
+        $num2 = rand(1, NUMBER_RANGE);
         $answer = findNcd($num1, $num2);
-        $questions["$num1 $num2"] = $answer;
+        $questionsAndAnswers[] = ['question' => "{$num1} {$num2}", 'answer' => $answer];
     }
-    return $questions;
+    run($questionsAndAnswers, DESCRIPTION);
 }
 
 function findNcd(int $num1, int $num2): int
@@ -29,10 +29,4 @@ function findNcd(int $num1, int $num2): int
         $remainder = $divisible % $divisor;
     }
     return $divisor;
-}
-
-function play()
-{
-    $questions = generateQuestions(NUMBER_OF_QUESTION);
-    run($questions, DESCRIPTION);
 }
