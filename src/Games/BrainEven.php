@@ -10,17 +10,12 @@ function play()
     $questionsAndAnswers = [];
     for ($i = 0; $i < NUMBER_OF_QUESTIONS; $i++) {
         $num = rand();
-        $questionsAndAnswers[] = ['question' => $num, 'answer' => check($num)];
+        $questionsAndAnswers[] = ['question' => $num, 'answer' => isEven($num)];
     }
     run($questionsAndAnswers, DESCRIPTION);
 }
 
-function isEven(int $num): bool
+function isEven(int $num): string
 {
-    return $num % 2 === 0;
-}
-
-function check(int $num): string
-{
-    return isEven($num) ? 'yes' : 'no';
+    return $num % 2 == 0 ? 'yes' : 'no';
 }

@@ -15,12 +15,12 @@ function play()
         $num2 = rand(0, NUMBER_RANGE);
         $operation = OPERATIONS[array_rand(OPERATIONS)];
         $question = "{$num1} {$operation} {$num2}";
-        $questionsAndAnswers[] = ['question' => $question, 'answer' => calc($num1, $num2, $operation)];
+        $questionsAndAnswers[] = ['question' => $question, 'answer' => calculate($num1, $num2, $operation)];
     }
     run($questionsAndAnswers, DESCRIPTION);
 }
 
-function calc(int $num1, int $num2, string $operation)
+function calculate(int $num1, int $num2, string $operation)
 {
     $rightAnswer = 0;
     switch ($operation) {
