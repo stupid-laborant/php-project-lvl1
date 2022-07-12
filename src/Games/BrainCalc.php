@@ -22,19 +22,14 @@ function play()
 
 function calculate(int $num1, int $num2, string $operation)
 {
-    $rightAnswer = 0;
     switch ($operation) {
         case '+':
-            $rightAnswer = $num1 + $num2;
-            break;
+            return $num1 + $num2;
         case '-':
-            $rightAnswer = $num1 - $num2;
-            break;
+            return $num1 - $num2;
         case '*':
-            $rightAnswer = $num1 * $num2;
-            break;
+            return $num1 * $num2;
         default:
             throw new \Exception("Unknown operator: {$operation}");
     }
-    return $rightAnswer;
 }

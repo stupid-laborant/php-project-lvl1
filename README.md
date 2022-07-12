@@ -3,7 +3,7 @@
 This is a training project which deals with basic PHP constructions and aims to get familiar with PHP environment, composer, linter and some best practices of codding.
 <h4>Requirements</h4>
 
-+ PHP7.4+
++ PHP8.0+
 + Globally installed <a href="https://getcomposer.org/">Composer</a>
 
 <h4>Installation</h4>

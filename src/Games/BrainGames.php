@@ -3,9 +3,9 @@
 
 namespace Brain\Games\Games;
 
-use function Brain\Games\Cli\sayHello as hello;
+use function Brain\Games\Cli\sayHello;
 
 function play()
 {
-    hello();
+    sayHello();
 }
